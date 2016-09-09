@@ -1,6 +1,13 @@
 # Configuration file
 /hrz/conf.py
 
+# Static file dev artifacts and production files
+/hrz/static/css/main.min.css
+/hrz/static/css/main.dev.map
+/hrz/static/css/main.dev.css
+/hrz/static/js/main.dev.js
+/hrz/static/js/main.min.js
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
