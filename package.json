@@ -1,0 +1,30 @@
+{
+  "name": "hrz-web",
+  "version": "0.0.0",
+  "description": "Website for Team Horizon",
+  "main": "Gruntfile.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamHrz/website.git"
+  },
+  "author": "twnt, pundurs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TeamHrz/website/issues"
+  },
+  "homepage": "https://github.com/TeamHrz/website#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
