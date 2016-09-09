@@ -65,3 +65,17 @@
 @import "utilities.less";
 
 // ========== END Bootrstap 3 selective import
+
+@static-path: "../";
+
+// Install font
+@font-face {
+    font-family: 'montserratregular';
+    src: url('@{static-path}font/montserrat-regular-webfont.woff2') format('woff2'),
+         url('@{static-path}font/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-family-base: ~"'montserratregular', @{font-family-sans-serif}";
