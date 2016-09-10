@@ -3,130 +3,138 @@
 {# Index page template #}
 
 {% block content %}
-    <div id="container">
-        <section id="first">
-            <h2 class="white">Horizon</h2>
+    <div id="container-index">
+        <section class="first">
+            <h2 class="white">{{ config.APP_NAME }}</h2>
         </section>
-        <div class="break"></div>
-        <section id="second">
-            <h2>WHO ARE WE?</h2>
-            <h6>Team Horizon is StarCraft 2 team with very high level and huge passion</h6>
-            <div id="promo1" class="promo">
-                <div class="circle" id="purple">
-                    <img src="{{ url_for('static', filename='img/passion.png') }}" width="90px" height="90px">
-                </div>
-                <h3>passion</h3>
-                <p>We aren"t playing for league but for skill, passion and fun!</p>
+        <section class="text-center container-fluid">
+            <div class="title">
+                <h2>WHO ARE WE?</h2>
+                <h6>Team Horizon is StarCraft 2 team with very high level and huge passion</h6>
             </div>
-            <div id="promo2" class="promo">
-                <div class="circle" id="cyan">
-                    <img src="{{ url_for('static', filename='img/clanwars.png') }}" width="90px" height="90px">
+            <div class="row">
+                <div class="promo">
+                    <div class="circle purple">
+                        <img src="{{ url_for('static', filename='img/passion.png') }}" alt="heart">
+                    </div>
+                    <h3>passion</h3>
+                    <p>We aren"t playing for league but for skill, passion and fun!</p>
                 </div>
-                <h3>clan wars</h3>
-                <p>Just join to academy or main team and play with us!</p>
-            </div>
-            <div id="promo3" class="promo">
-                <div class="circle" id="blue">
-                    <img src="{{ url_for('static', filename='img/tournaments.png') }}" width="90px" height="90px">
+                <div class="promo">
+                    <div class="circle cyan">
+                        <img src="{{ url_for('static', filename='img/clanwars.png') }}" alt="people">
+                    </div>
+                    <h3>clan wars</h3>
+                    <p>Just join to academy or main team and play with us!</p>
                 </div>
-                <h3>tournaments</h3>
-                <p>We"re playing and organising 1vs1 and team tourneys!</p>
-            </div>
-            <div id="promo4" class="promo">
-                <div class="circle" id="red">
-                    <img src="{{ url_for('static', filename='img/fairplay.png') }}" width="90px" height="90px">
+                <div class="clearfix visible-sm-block"></div>
+                <div class="promo">
+                    <div class="circle blue">
+                        <img src="{{ url_for('static', filename='img/tournaments.png') }}" alt="ribbon">
+                    </div>
+                    <h3>tournaments</h3>
+                    <p>We"re playing and organising 1vs1 and team tourneys!</p>
                 </div>
-                <h3>fair play</h3>
-                <p>Please show us your good manners if you want play and be with us!</p>
+                <div class="promo">
+                    <div class="circle red">
+                        <img src="{{ url_for('static', filename='img/fairplay.png') }}" alt="handshake">
+                    </div>
+                    <h3>fair play</h3>
+                    <p>Please show us your good manners if you want play and be with us!</p>
+                </div>
             </div>
         </section>
-        <div class="break"></div>
-        <section id="third">
-            <div class="break" id="third"></div>
-            <h5 class="white">"Talent wins games, but teamwork and intelligence wins championships"</h5>
+        <section class="quote">
+            <h5>"Talent wins games, but teamwork and intelligence wins championships."</h5>
             <p class="author">Michael Jordan</p>
-            <div class="break" id="third"></div>
         </section>
-        <section id="second roster">
-            <div class="break"></div>
-            <h2>team roster</h2>
-            <div class="break"></div>
-            <div id="promo1" class="promo">
-                <a href="#roster" id="main"><div class="circle" id="purple"><img src="{{ url_for('static', filename='img/roster.png') }}" width="90px" height="90px"></div>
-                <h3>main team</h3>
-                </a>
+        <section class="roster">
+            <div class="title">
+                <h2>team roster</h2>
+                <h6 class="text-muted"><em>Coming soon</em></h6>
             </div>
-            <div id="promo2" class="promo">
-                <a href="#roster" id="academy"><div class="circle" id="blue"><img src="{{ url_for('static', filename='img/roster.png') }}" width="90px" height="90px"></div>
-                <h3>academy</h3>
-                </a>
+            <div class="row">
+                <div class="roster-group">
+                    <a href="#" id="roster-main">
+                        <div class="circle purple"><img src="{{ url_for('static', filename='img/roster.png') }}" alt="people"></div>
+                        <h3>main team</h3>
+                    </a>
+                </div>
+                <div class="roster-group">
+                    <a href="#" id="roster-academy">
+                        <div class="circle blue"><img src="{{ url_for('static', filename='img/roster.png') }}" alt="people"></div>
+                        <h3>academy</h3>
+                    </a>
+                </div>
+                <div class="roster-group">
+                    <a href="#" id="roster-staff">
+                        <div class="circle red"><img src="{{ url_for('static', filename='img/roster.png') }}" alt="people"></div>
+                        <h3>staff</h3>
+                    </a>
+                </div>
             </div>
-            <div id="promo3" class="promo">
-                <a href="#roster" id="staff"><div class="circle" id="red"><img src="{{ url_for('static', filename='img/roster.png') }}" width="90px" height="90px"></div>
-                <h3>staff</h3>
-                </a>
-            </div>
-            <div class="break"></div>
             <div id="rost"></div>
-            <div class="break"></div>
         </section>
-        <section id="fourth">
-            <div class="break" id="fourth"></div>
-            <h2 class="white">Our achievements</h2>
-            <div class="break" id="fourth"></div>
-            <img src="{{ url_for('static', filename='img/medal.png') }}" width="45px" height="45px">
-            <h3 class="white">Alpha VI Euro Amateur Champion</h3>
-            <img src="{{ url_for('static', filename='img/medal.png') }}" width="45px" height="45px">
-            <h3 class="white">Alpha Team League #2 Runner-up</h3>
-            <div class="break" id="fourth"></div><div class="break" id="fourth"></div>
+        <section class="achievements">
+            <div class="title">
+                <h2>Our achievements</h2>
+            </div>
+            <h3 class="achievement">
+                <img src="{{ url_for('static', filename='img/medal.png') }}" width="45px" height="45px">
+                Alpha VI Euro Amateur Champion
+            </h3>
+            <h3 class="achievement">
+                <img src="{{ url_for('static', filename='img/medal.png') }}" width="45px" height="45px">
+                Alpha Team League #2 Runner-up
+            </h3>
         </section>
-        <section id="third">
-            <div class="break" id="third"></div>
-            <div id="upcoming" class="sr">
-                <h2 class="white">Upcoming matches</h2>
-                <div class="break half" id="third"></div>
+        {#<section class="clan-wars">
+            <div class="clan-war-col">
+                <h2>Upcoming matches</h2>
                 <table class="table table-striped">
                     <tbody></tbody>
                 </table>
             </div>
-            <div id="results" class="sr">
-                <h2 class="white">Last results</h2>
-                <div class="break half" id="third"></div>
+            <div class="clan-war-col">
+                <h2>Last results</h2>
                 <table class="table table-striped">
                     <tbody></tbody>
                 </table>
-                <div class="break half" id="third"></div>
             </div>
-        </section>
-        <section id="fourth">
-            <div id="streams" class="sr">
-                <div class="break half" id="fourth"></div>
+        </section> #}
+        <section class="streams">
+            <div class="title">
                 <h2 class="white">Streams</h2>
-                <div class="break half" id="fourth"></div>
-                <div class="break half" id="fourth"></div>
+                <h6 class="text-muted"><em>Coming soon</em></h6>
             </div>
         </section>
-        <section id="second join">
-            <div class="break"></div>
-            <h2>Join us!</h2>
-            <h6>This is easy!</h6>
-            <div class="break"></div>
-            <button class="red" id="join">How to join?</button>
-            <div class="break"></div>
-            <div id="howto" style="display:none; width: 50%">
-                <b>We at Horizon function on a rotation model: A large clan focusing on having fun along with a few select people taking it to the next level, known as the main roster. This main roster is selected and rotated from the whole clan"s top players internally every so often. As of such, anyone can have a shot of becoming part of the main roster and achieving true greatness... in this video game. There are no obligations to try to join the main roster.
-                    Requirements for Joining:
-                    1. Having a good attitude toward the game and other players. Horizon is built on humility, determination, and respect. Deliberately ruining others" experience is not tolerated.
-                    2. Reasonable ability in the English language.
-                    3.Details of your ingame ID, Race, and League.
-                    To join us please join to our Discord channel #welcome and contact anybody from @Recruitment (brown names). Hope to see you soon!
-                    <a href="https://discord.gg/AAP4RhT">Our Discord</a></b>
-                <div class="break"></div>
+        <section>
+            <div class="title">
+                <h2>Join us!</h2>
+                <h6>This is easy!</h6>
+            </div>
+            <div class="recruitment-rules">
+                <p>We at Horizon function on a rotation model: A large clan focusing on having fun along with a few select people taking it to the next level, known as the main roster. This main roster is selected and rotated from the whole clan"s top players internally every so often. As of such, anyone can have a shot of becoming part of the main roster and achieving true greatness... in this video game. There are no obligations to try to join the main roster.</p>
+                <p>Requirements for joining:</p>
+                <ol>
+                    <li>Having a good attitude toward the game and other players. Horizon is built on humility, determination, and respect. Deliberately ruining others" experience is not tolerated.</li>
+                    <li>Reasonable ability in the English language.</li>
+                    <li>Details of your ingame ID, Race, and League.</li>
+                </ol>
+                <p>To join us, click the Discord ghost below to go to our <em>#welcome</em> channel and contact anybody from <span class="recruitment-role">@Recruitment</span>. Hope to see you soon!</p>
+                <p class="join-discord">
+                    <a href="https://discord.gg/AAP4RhT" target="_blank">
+                        <img src="{{ url_for('static', filename='img/discord.png') }}" alt="Discord ghost">
+                    </a>
+                </p>
+            </div>
         </section>
-        <section id="fourth" class="foot">
-            <h6 class="white">
-                <a href="https://www.iconfinder.com/icons/1314145/connect_group_myspace_network_online_social_team_icon#size=128">Icon</a> / <a href="https://www.iconfinder.com/iconbaandar">iconbaandar</a> / <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
-                2016, twnt and pundurs for Team Horizon
+        <section class="footer">
+            <h6>
+                Icons from <a href="https://www.iconfinder.com/iconbaandar" target="_blank">iconbaandar</a>,
+                Header image credit <a href="https://unsplash.com/@jeffkingla" target="_blank">Jeff King</a>,
+                made by twnt and pundurs for Team Horizon
+                <br>Source on <a href="https://github.com/TeamHrz/website" target="_blank">Github</a>
             </h6>
         </section>
     </div>

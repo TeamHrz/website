@@ -1,0 +1,168 @@
+/*
+ * Front page style
+*/
+
+@circle-diameter: 145px;
+@section-bottom-margin: 90px;
+@blue-accent: #3ab0e2;
+@dark-accent: #272727;
+
+.padded-container(@bg, @text: #ffffff) {
+  background-color: @bg;
+  color: @text;
+  padding: @section-bottom-margin 0;
+}
+
+#container-index {
+  & section {
+    margin-bottom: @section-bottom-margin;
+    & .title {
+      text-align: center;
+      margin-bottom: @section-bottom-margin / 1.618;
+    }
+  }
+  & .first {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: black url('@{static-path}img/unsplash.jpg') fixed;
+    & h2 {
+      text-shadow: 1px 1px 0 #7e7e7e;
+    }
+  }
+  & .promo {
+    .make-sm-column(6);
+    .make-md-column(3);
+    padding: 0 5%;
+  }
+  & .circle {
+    display: block;
+    width: @circle-diameter;
+    height: @circle-diameter;
+    border: 10px solid #ececec;
+    margin: auto auto 20px auto;
+    padding: 20px 15px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    &.red:hover {
+      border-color: #e96656;
+    }
+    &.blue:hover {
+      border-color: #3ab0e2;
+    }
+    &.cyan:hover {
+      border-color: #afeeee;
+    }
+    &.purple:hover {
+      border-color: #cc99ff;
+    }
+    & img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  & .quote {
+    .padded-container(@blue-accent);
+    text-align: center;
+    & .author {
+	  font-size: 16px;
+    }
+  }
+  & .roster {
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: @screen-lg-min) {
+      width: 50%;
+    }
+    & a {
+      color: @text-color;
+      &:hover,
+      &:focus,
+      &:active {
+        color: @brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  & .roster-group {
+    .make-sm-column(4);
+    text-align: center;
+  }
+  & .achievements {
+    .padded-container(@dark-accent);
+    text-align: center;
+    margin-bottom: 0;
+    & .achievement {
+      margin-bottom: @section-bottom-margin / 6;
+    }
+  }
+  & .clan-wars {
+    .padded-container(@blue-accent);
+    margin-bottom: 0;
+    & .clan-war-col {
+      .make-sm-column(6);
+    }
+  }
+  & .streams {
+    .padded-container(@dark-accent);
+  }
+  .recruitment-rules {
+    margin-left: auto;
+    margin-right: auto;
+    .container-fluid();
+    @media screen and (min-width: @grid-float-breakpoint) {
+      width: 66%;
+    }
+    & .recruitment-role {
+      color: #A84300;
+      font-style: italic;
+    }
+    & .join-discord {
+      text-align: center;
+      margin-top: @section-bottom-margin / 1.618;
+    }
+  }
+  & .footer {
+    .container-fluid();
+    .padded-container(@dark-accent);
+    margin-bottom: 0;
+    text-align: center;
+  }
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    padding-bottom: 10px;
+    position: relative;
+    margin: 0;
+    font-weight: 700;
+  }
+  & h2 {
+    line-height: 40px;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+  & h3 {
+    line-height: 18px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  & h5 {
+    line-height: 40px;
+    font-size: 16px;
+    font-style: italic;
+  }
+  & h6 {
+    line-height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .white {
+    color: #ffffff;
+  }
+}
