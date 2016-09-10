@@ -37,3 +37,19 @@ Set the environment variable for the config file and run the server:
     $ export HRZ_CONFIG=conf.py; python hrz/hrz.py
     
 For production mode, see [Deployment options](http://flask.pocoo.org/docs/0.11/deploying/#deployment).
+
+## Development and testing
+
+Install testing dependencies:
+
+    $ pip install -r requirements-test.txt
+
+If you work on the front-end, make sure you have Grunt running in the background so the development static files are built for you 
+dynamically:
+
+    # Prebuild static files and start watching
+    $ grunt && grunt watch
+
+Run tests with:
+
+    $ nosetests --with-coverage --cover-package=hrz 

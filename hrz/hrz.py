@@ -11,5 +11,5 @@ app.config.from_envvar('HRZ_CONFIG')
 def index():
     return flask.render_template('index.html')
 
-if __name__ == '__main__':
+if __name__ == '__main__':   # pragma: no cover
     app.run()
