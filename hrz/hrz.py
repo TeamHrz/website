@@ -4,7 +4,10 @@ __author__ = "Pundurs"
 
 # Init app and load config
 app = flask.Flask(__name__)
-app.config.from_envvar('HRZ_CONFIG')
+try:
+    app.config.from_envvar('HRZ_CONFIG')
+except RuntimeError:
+    app.config.from_pyfile('conf.py')
 
 
 @app.route('/')

@@ -34,9 +34,13 @@ Copy the example configuration file and edit the values within accordingly:
 
     $ cp hrz/conf.example.py hrz/conf.py && $EDITOR hrz/conf.py
     
-Set the environment variable for the config file and run the server:
+In case you want to store the config file elsewhere, you can set an environment variable with it's path:
 
-    $ export HRZ_CONFIG=conf.py; python hrz/hrz.py
+    $ export HRZ_CONFIG=path/to/conf.py
+    
+Run the server:
+
+    $ python hrz/hrz.py
     
 For production mode, see [Deployment options](http://flask.pocoo.org/docs/0.11/deploying/#deployment).
 
