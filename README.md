@@ -1,5 +1,7 @@
 # Team Horizon website
 
+[![Build Status](https://travis-ci.org/TeamHrz/website.svg?branch=master)](https://travis-ci.org/TeamHrz/website)
+
 A simple [Flask](http://flask.pocoo.org/) based web app.
 
 ## Requirements
