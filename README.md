@@ -20,13 +20,11 @@ Install front-end dependencies:
     
 Build static files:
     
-    ```sh
     # For development environment
     $ grunt
     
     # For production
     $ grunt production
-    ```
     
 ## Configuration and running
 
