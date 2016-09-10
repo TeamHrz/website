@@ -8,4 +8,5 @@ install:
   - pip install -r requirements.txt
   - pip install -r requirements-test.txt
 script:
+  - cp hrz/conf.example.py hrz/conf.py
   - nosetests --with-coverage --cover-package=hrz
